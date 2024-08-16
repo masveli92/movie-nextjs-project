@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {apiService} from "@/services/api.service";
 import MoviesListCards from "@/components/MoviesListCards/MoviesListCards";
 import {IMovie} from "@/models/IMovie";
 
