@@ -1,0 +1,17 @@
+.body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header{
+    width: 100%;
+}
+.genreBar{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    width: 13%;
+    background: lightsteelblue;
+}
+.childrenPage{
+    width: 87%
+}

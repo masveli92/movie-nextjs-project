@@ -1,10 +1,14 @@
 import GenresList from '@/components/genresList/GenresList';
+import { apiService } from '@/services/api.service';
 import React from 'react';
 
-const GenresPage = () => {
+const GenresPage = async () => {
+
+    const genresList = await apiService.getGenres()
+
     return (
         <div>
-            <GenresList/>
+            <GenresList genres = {genresList}/>
         </div>
     );
 };

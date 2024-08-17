@@ -1,10 +1,11 @@
 import React from 'react';
-import {posterURL} from "@/configs/urls";
 import MovieInfo from "@/components/movieInfo/MovieInfo";
 
 const MoviePage = ({searchParams}: any) => {
 
     let movie = JSON.parse(searchParams.data);
+
+    console.log(movie)
 
     return (
         <div>

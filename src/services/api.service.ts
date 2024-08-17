@@ -9,7 +9,8 @@ const token: string = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YzliYWNlZGExMzc3Yzc2MDUx
 const apiService = {
 
     getAllMovies: async (page: string): Promise<IMovie[]> => {
-        const movieData:IMovieData = await fetch(baseURL + urls.allMovies, {
+        const movieData:IMovieData = await fetch(baseURL + urls.allMovies + '?page=' + page , {
+
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,

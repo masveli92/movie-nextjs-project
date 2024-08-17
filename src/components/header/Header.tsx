@@ -1,17 +1,18 @@
 import React from 'react';
+import css from './Header.module.css'
 import Link from "next/link";
 
 const Header = () => {
     return (
-        <div>
-            <ul>
-                <li>
+        <div className={css.header}>
+
+                <div>
                     <Link href={'/'}>Home</Link>
-                </li>
-                <li>
+                </div>
+                <div>
                     <Link href={'/movies'}>Movies</Link>
-                </li>
-            </ul>
+                </div>
+
         </div>
     );
 };
