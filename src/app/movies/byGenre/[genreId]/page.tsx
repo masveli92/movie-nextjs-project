@@ -7,7 +7,7 @@ const MovieByGenrePage = async ({searchParams}:any) => {
     let genre = JSON.parse(searchParams.data)
     console.log(genre.id)
 
-    const moviesByGenreId = await apiService.getMoviesByGenre('1', 'genre.id');
+    const moviesByGenreId = await apiService.getMoviesByGenre('1', genre.id);
 
 
     return (
