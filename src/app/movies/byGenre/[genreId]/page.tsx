@@ -7,15 +7,13 @@ const MovieByGenrePage = async ({searchParams}:any) => {
     let genre = JSON.parse(searchParams.data)
     console.log(genre.id)
 
-    const moviesByGenreId = await apiService.getAllMovies('3');
+    const moviesByGenreId = await apiService.getMoviesByGenre('1', 'genre.id');
 
-    const filtered =  moviesByGenreId.filter(movie => movie.genre_ids.includes(genre.id))
-    console.log(filtered)
 
     return (
         <div>
             filtered movie page
-            <MoviesList movies={filtered}/>
+            <MoviesList movies={moviesByGenreId}/>
         </div>
     );
 };

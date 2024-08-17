@@ -21,6 +21,21 @@ const apiService = {
 
         return movieData.results;
     },
+
+    getMoviesByGenre: async (page: string, with_genres:string): Promise<IMovie[]> => {
+        const movieData:IMovieData = await fetch(baseURL + urls.allMovies + '?with_genres=' + with_genres + '&page=' +page, {
+
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(value => value.json())
+
+        return movieData.results;
+    },
+
     getGenres:async():Promise<IGenre[]> =>{
         const genres: IGenre[] = await fetch(baseURL + urls.genres, {
             method: 'GET',
