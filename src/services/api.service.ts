@@ -3,7 +3,6 @@ import {baseURL, urls} from "@/configs/urls";
 import { IGenre } from "@/models/IGenre";
 
 
-
 const token: string = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YzliYWNlZGExMzc3Yzc2MDUxNjQwNjVlZWMyMWNhYSIsInN1YiI6IjYzNGEwOGJjZjE3NTljMDA3ZmMwMDkyYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0bWxWpgdFYwdUojerArBVJrlu286XhRaK0fZhzPbl58'
 
 const apiService = {
@@ -24,6 +23,20 @@ const apiService = {
 
     getMoviesByGenre: async (page: string, with_genres:string): Promise<IMovie[]> => {
         const movieData:IMovieData = await fetch(baseURL + urls.allMovies + '?with_genres=' + with_genres + '&page=' +page, {
+
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(value => value.json())
+
+        return movieData.results;
+    },
+
+    getMoviesBySearch: async (page: string, query:string ): Promise<IMovie[]> => {
+        const movieData:IMovieData = await fetch(baseURL + urls.searchMovie + '?query=' + query + '&page=' +page, {
 
             method: 'GET',
             headers: {

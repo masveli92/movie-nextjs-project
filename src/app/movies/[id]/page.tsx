@@ -12,7 +12,7 @@ const MoviePage = ({searchParams}: any) => {
             <MovieInfo movie={movie}/>
         </div>
 
-);
+    );
 };
 
 export default MoviePage;
