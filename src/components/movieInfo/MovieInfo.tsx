@@ -21,7 +21,6 @@ const MovieInfo:FC<IProps> = ({movie}) => {
             <div>
             <h2>{movie.title}</h2>
             <h4><StarsRating>{movie.vote_average}</StarsRating></h4>
-            <div>{movie.genre_ids}</div>
             <div>{movie.overview}</div>
             </div>
         </div>

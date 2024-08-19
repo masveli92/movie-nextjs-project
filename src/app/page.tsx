@@ -1,11 +1,7 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import MoviePage from "./movies/[id]/page";
+import {redirect} from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
+const MainPage =  () => {
+  redirect('/movies');
+};
 
-    </main>
-  );
-}
+export default MainPage;
