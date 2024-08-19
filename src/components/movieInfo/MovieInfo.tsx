@@ -3,6 +3,7 @@ import React, {FC} from 'react';
 import {posterURL} from "@/configs/urls";
 import {IMovie} from "@/models/IMovie";
 import { StarsRating } from '../starsRating/StarsRating';
+import css from './MovieInfo.module.css'
 
 
 interface IProps{
@@ -12,13 +13,17 @@ interface IProps{
 const MovieInfo:FC<IProps> = ({movie}) => {
 
 
+
+
     return (
-        <div>
-            <div><img src={posterURL + movie.poster_path} alt="poster"/></div>
-            <div>{movie.title}</div>
-            <h3><StarsRating>{movie.vote_average}</StarsRating></h3>
+        <div className={css.container}>
+            <div><img className={css.image} src={posterURL + movie.poster_path} alt="poster"/></div>
+            <div>
+            <h2>{movie.title}</h2>
+            <h4><StarsRating>{movie.vote_average}</StarsRating></h4>
             <div>{movie.genre_ids}</div>
             <div>{movie.overview}</div>
+            </div>
         </div>
     );
 };

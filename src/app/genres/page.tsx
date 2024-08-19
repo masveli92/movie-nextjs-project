@@ -14,3 +14,4 @@ const GenresPage = async () => {
 };
 
 export default GenresPage;
+

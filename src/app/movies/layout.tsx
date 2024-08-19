@@ -9,9 +9,7 @@ type Props = { children: React.ReactNode}
 const MoviesLayout = ({children}: Props) => {
     return(
         <div>
-            movies layout start
             {children}
-            movies layout end
         </div>
     )
 }

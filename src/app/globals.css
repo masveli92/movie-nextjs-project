@@ -1,16 +1,15 @@
 .body{
     display: flex;
     flex-wrap: wrap;
+    background: rgba(33, 83, 100, 0.69);
 }
 
 .header{
     width: 100%;
 }
 .genreBar{
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    width: 13%;
-    background: lightsteelblue;
+    width: 10%;
+
 }
 .childrenPage{
     width: 87%

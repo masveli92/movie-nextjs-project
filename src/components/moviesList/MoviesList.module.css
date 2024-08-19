@@ -1,7 +1,7 @@
 .movieList{
     display: flex;
     flex-wrap: wrap;
-    background: #FCE8BA;
+    /*background: #FCE8BA;*/
     justify-content: space-evenly;
 
 }

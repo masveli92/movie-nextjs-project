@@ -3,6 +3,7 @@ import Link from "next/link";
 import {posterURL} from "@/configs/urls";
 import {IMovie} from "@/models/IMovie";
 import css from './MoviesListCards.module.css'
+import { StarsRating } from '../starsRating/StarsRating';
 
 interface IProps{
     movie: IMovie
@@ -12,7 +13,8 @@ const MoviesListCards:FC<IProps> = ({movie}) => {
             <div className={css.movieBlock}>
                  <Link href={{pathname: '/movies/' + movie.id, query: {data:JSON.stringify(movie)}}}>
                  <img className={css.movieBlockImg} src={posterURL + movie.poster_path} alt="poster"/>
-                 <h3>{movie.title} </h3>
+                 <div><StarsRating>{movie.vote_average}</StarsRating></div>
+                 <p>{movie.title} </p>
                  </Link>
             </div>
     );

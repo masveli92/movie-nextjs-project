@@ -1,4 +1,4 @@
-import {IMovie, IMovieData} from "@/models/IMovie"
+import {IMovie} from "@/models/IMovie"
 import {baseURL, urls} from "@/configs/urls";
 import { IGenre } from "@/models/IGenre";
 
@@ -8,7 +8,7 @@ const token: string = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YzliYWNlZGExMzc3Yzc2MDUx
 const apiService = {
 
     getAllMovies: async (page: string): Promise<IMovie[]> => {
-        const movieData:IMovieData = await fetch(baseURL + urls.allMovies + '?page=' + page , {
+        const movieData = await fetch(baseURL + urls.allMovies + '?page=' + page , {
 
             method: 'GET',
             headers: {
@@ -22,7 +22,7 @@ const apiService = {
     },
 
     getMoviesByGenre: async (page: string, with_genres:string): Promise<IMovie[]> => {
-        const movieData:IMovieData = await fetch(baseURL + urls.allMovies + '?with_genres=' + with_genres + '&page=' +page, {
+        const movieData = await fetch(baseURL + urls.allMovies + '?with_genres=' + with_genres + '&page=' +page, {
 
             method: 'GET',
             headers: {
@@ -36,7 +36,7 @@ const apiService = {
     },
 
     getMoviesBySearch: async (page: string, query:string ): Promise<IMovie[]> => {
-        const movieData:IMovieData = await fetch(baseURL + urls.searchMovie + '?query=' + query + '&page=' +page, {
+        const movieData = await fetch(baseURL + urls.searchMovie + '?query=' + query + '&page=' +page, {
 
             method: 'GET',
             headers: {
@@ -50,7 +50,7 @@ const apiService = {
     },
 
     getGenres:async():Promise<IGenre[]> =>{
-        const genres: IGenre[] = await fetch(baseURL + urls.genres, {
+        const genres = await fetch(baseURL + urls.genres, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,

@@ -1,6 +1,6 @@
 .header {
     min-height: 100px;
-    background: #C89B89;
+    /*background: rgba(6, 27, 75, 0.24);*/
     display: flex;
     justify-content: space-evenly;
     padding-left: 20px;

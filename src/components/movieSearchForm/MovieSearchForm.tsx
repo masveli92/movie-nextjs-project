@@ -2,9 +2,11 @@
 import React from 'react';
 
 const SearchMoviesComponent = () => {
+
+
     return (
         <div >
-            <form action="/movies/bySearch" >
+            <form action="/movies/bySearch/" >
                 <input
                     type="text"
                     name="query"

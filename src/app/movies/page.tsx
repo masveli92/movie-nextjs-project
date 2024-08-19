@@ -1,14 +1,14 @@
-import React from 'react';
 import MoviesList from "@/components/moviesList/MoviesList";
 import {apiService} from "@/services/api.service";
 
 
 const MoviesPage = async () => {
-    const allMovies = await apiService.getAllMovies('1' );
+    const allMoviesData = await apiService.getAllMovies('1' )
+
 
     return (
         <div >
-            <MoviesList movies={allMovies}/>
+            <MoviesList movies={allMoviesData}/>
         </div>
     );
 };
